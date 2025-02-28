@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .marksheetContainer{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .marksheet .profileImg{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 150px;
+            text-align: center;
+        }
+        img{
+            max-width: 100px;
+            max-height: 100px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        span {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form </h1>
+    <form id="submitForm" method="post" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Enter your Name" required> <br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="abc@gmail.com" required> <br><br>
+        
+        <label for="phoneNum">Phone Number:</label>
+        <input type="tel" name="phone" id="phoneNum"  maxlength="10" placeholder="enter 10 digit phn number" required> <br><br>
+        
+        <label for="profile">Profile</label>
+        <input type="file" name="profileImage" id="profile" accept="images/*" required> <br><br>
+        <div id="profileImg"></div><br>
+        
+        <label for="markesheets">Marksheets:</label>
+        <input type="file" name="marksheets" id="markesheets" accept="accept/*" multiple> <br><br>
+        <div class="marksheetContainer" id="marksheetContainer"></div><br>
+        <span id="Msg"></span>
+        <input type="submit" value="Submit Form">
+    </form>
+    <script src="./javascripts/preview.js"></script>
+</body>
+</html>
